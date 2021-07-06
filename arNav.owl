@@ -1,0 +1,2464 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/jesusrubio/ontologies/2021/1/Indoor-Navigation#"
+     xml:base="http://www.semanticweb.org/jesusrubio/ontologies/2021/1/Indoor-Navigation"
+     xmlns:dbo="https://dbpedia.org/ontology/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sch="https://schema.org/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:arNav="http://www.semanticweb.org/jesusrubio/ontologies/2021/1/Indoor-Navigation"
+     xmlns:arNav1="http://www.jesusrubio.com/arNav#"
+     xmlns:ontology="http://dbpedia.org/ontology/"
+     xmlns:Indoor-Navigation="http://www.semanticweb.org/jesusrubio/ontologies/2021/1/Indoor-Navigation#">
+    <owl:Ontology rdf:about="http://www.jesusrubio.com/arNav"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#esEncargadoDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.jesusrubio.com/arNav#esEncargadoDe">
+        <owl:inverseOf rdf:resource="http://www.jesusrubio.com/arNav#esEncargadoPor"/>
+        <rdfs:domain rdf:resource="http://www.jesusrubio.com/arNav#Personal"/>
+        <rdfs:range rdf:resource="http://www.jesusrubio.com/arNav#Punto_de_Interes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#esEncargadoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.jesusrubio.com/arNav#esEncargadoPor">
+        <rdfs:domain rdf:resource="http://www.jesusrubio.com/arNav#Punto_de_Interes"/>
+        <rdfs:range rdf:resource="http://www.jesusrubio.com/arNav#Personal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/id -->
+
+    <owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/id">
+        <owl:equivalentProperty rdf:resource="http://www.jesusrubio.com/arNav#nodeID"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lod.nik.uni-obuda.hu/iloc#Floor -->
+
+    <owl:DatatypeProperty rdf:about="http://lod.nik.uni-obuda.hu/iloc#Floor">
+        <owl:equivalentProperty rdf:resource="https://schema.org/floorLevel"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lod.nik.uni-obuda.hu/iloc#Location -->
+
+    <owl:DatatypeProperty rdf:about="http://lod.nik.uni-obuda.hu/iloc#Location">
+        <owl:equivalentProperty rdf:resource="http://www.jesusrubio.com/arNav#institution"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#areas -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jesusrubio.com/arNav#areas">
+        <rdfs:domain rdf:resource="http://www.jesusrubio.com/arNav#Aula"/>
+        <rdfs:domain rdf:resource="http://www.jesusrubio.com/arNav#Laboratorio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Refeers to the careers some rooms are designed for</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#career_grade -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jesusrubio.com/arNav#career_grade">
+        <owl:equivalentProperty rdf:resource="https://schema.org/industry"/>
+        <rdfs:domain rdf:resource="http://www.jesusrubio.com/arNav#Personal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#extension -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jesusrubio.com/arNav#extension">
+        <owl:equivalentProperty rdf:resource="http://xmlns.com/foaf/0.1/phone"/>
+        <rdfs:domain rdf:resource="http://www.jesusrubio.com/arNav#Personal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#fatherName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jesusrubio.com/arNav#fatherName">
+        <owl:equivalentProperty rdf:resource="http://xmlns.com/foaf/0.1/lastName"/>
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+        <rdfs:domain rdf:resource="http://www.jesusrubio.com/arNav#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#institution -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jesusrubio.com/arNav#institution">
+        <rdfs:domain rdf:resource="http://www.jesusrubio.com/arNav#Persona"/>
+        <rdfs:domain rdf:resource="http://www.jesusrubio.com/arNav#Punto_de_Interes"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#middleName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jesusrubio.com/arNav#middleName">
+        <owl:equivalentProperty rdf:resource="https://schema.org/additionalName"/>
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+        <rdfs:domain rdf:resource="http://www.jesusrubio.com/arNav#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#motherName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jesusrubio.com/arNav#motherName">
+        <owl:equivalentProperty rdf:resource="http://xmlns.com/foaf/0.1/lastName"/>
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+        <rdfs:domain rdf:resource="http://www.jesusrubio.com/arNav#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#nodeID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jesusrubio.com/arNav#nodeID">
+        <rdfs:domain rdf:resource="http://www.jesusrubio.com/arNav#Nodo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#shortName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jesusrubio.com/arNav#shortName">
+        <owl:equivalentProperty rdf:resource="https://schema.org/additionalName"/>
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+        <rdfs:domain rdf:resource="http://www.jesusrubio.com/arNav#Punto_de_Interes"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Image -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/Image">
+        <rdfs:domain rdf:resource="http://www.jesusrubio.com/arNav#Persona"/>
+        <rdfs:domain rdf:resource="http://www.jesusrubio.com/arNav#Punto_de_Interes"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/firstName -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/firstName">
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+        <rdfs:domain rdf:resource="http://www.jesusrubio.com/arNav#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/lastName -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/lastName">
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+        <rdfs:domain rdf:resource="http://www.jesusrubio.com/arNav#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/mbox -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/mbox">
+        <rdfs:domain rdf:resource="http://www.jesusrubio.com/arNav#Personal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name">
+        <rdfs:domain rdf:resource="http://www.jesusrubio.com/arNav#Persona"/>
+        <rdfs:domain rdf:resource="http://www.jesusrubio.com/arNav#Punto_de_Interes"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/phone -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/phone">
+        <rdfs:domain rdf:resource="http://www.jesusrubio.com/arNav#Personal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/publications -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/publications">
+        <rdfs:domain rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/title -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/title">
+        <rdfs:domain rdf:resource="http://www.jesusrubio.com/arNav#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/additionalName -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/additionalName">
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/description -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/description">
+        <rdfs:domain rdf:resource="http://www.jesusrubio.com/arNav#Punto_de_Interes"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/floorLevel -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/floorLevel">
+        <rdfs:domain rdf:resource="http://www.jesusrubio.com/arNav#Nodo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/industry -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/industry">
+        <rdfs:comment>Grado de especialización
+https://schema.org/industry</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/jobTitle -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/jobTitle">
+        <rdfs:domain rdf:resource="http://www.jesusrubio.com/arNav#Personal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/knowsAbout -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/knowsAbout">
+        <rdfs:domain rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://lod.nik.uni-obuda.hu/iloc#POI -->
+
+    <owl:Class rdf:about="http://lod.nik.uni-obuda.hu/iloc#POI">
+        <owl:equivalentClass rdf:resource="http://www.jesusrubio.com/arNav#Punto_de_Interes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Aula -->
+
+    <owl:Class rdf:about="http://www.jesusrubio.com/arNav#Aula">
+        <rdfs:subClassOf rdf:resource="http://www.jesusrubio.com/arNav#Punto_de_Interes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Cuarto -->
+
+    <owl:Class rdf:about="http://www.jesusrubio.com/arNav#Cuarto">
+        <rdfs:subClassOf rdf:resource="http://www.jesusrubio.com/arNav#Punto_de_Interes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Docente -->
+
+    <owl:Class rdf:about="http://www.jesusrubio.com/arNav#Docente">
+        <rdfs:subClassOf rdf:resource="http://www.jesusrubio.com/arNav#Personal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Laboratorio -->
+
+    <owl:Class rdf:about="http://www.jesusrubio.com/arNav#Laboratorio">
+        <rdfs:subClassOf rdf:resource="http://www.jesusrubio.com/arNav#Punto_de_Interes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Nodo -->
+
+    <owl:Class rdf:about="http://www.jesusrubio.com/arNav#Nodo"/>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Oficina -->
+
+    <owl:Class rdf:about="http://www.jesusrubio.com/arNav#Oficina">
+        <rdfs:subClassOf rdf:resource="http://www.jesusrubio.com/arNav#Punto_de_Interes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Persona -->
+
+    <owl:Class rdf:about="http://www.jesusrubio.com/arNav#Persona"/>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Personal -->
+
+    <owl:Class rdf:about="http://www.jesusrubio.com/arNav#Personal">
+        <rdfs:subClassOf rdf:resource="http://www.jesusrubio.com/arNav#Persona"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Punto_de_Interes -->
+
+    <owl:Class rdf:about="http://www.jesusrubio.com/arNav#Punto_de_Interes">
+        <rdfs:subClassOf rdf:resource="http://www.jesusrubio.com/arNav#Nodo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Sala -->
+
+    <owl:Class rdf:about="http://www.jesusrubio.com/arNav#Sala"/>
+    
+
+
+    <!-- https://schema.org/Room -->
+
+    <owl:Class rdf:about="https://schema.org/Room"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#AcciónTutorial_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#AcciónTutorial_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Rocio_Méndez_Rodhe"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>45</arNav1:nodeID>
+        <arNav1:shortName>Acción Tutorial</arNav1:shortName>
+        <foaf:name>Apoyo Acción Tutorial</foaf:name>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Adolfo_Rodríguez_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Adolfo_Rodríguez_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#CoordinaciónISC_Rodhe"/>
+        <arNav1:extension>8312</arNav1:extension>
+        <arNav1:fatherName>Rodríguez</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:middleName>Josué</arNav1:middleName>
+        <arNav1:motherName>Rodríguez</arNav1:motherName>
+        <foaf:firstName>Adolfo</foaf:firstName>
+        <foaf:mbox xml:lang="docentes.uat.edu.mx">arodriguez</foaf:mbox>
+        <foaf:title>Dr.</foaf:title>
+        <sch:jobTitle>Coordinación de Ingeniería en Sistemas Computacionales</sch:jobTitle>
+        <sch:knowsAbout>Sensores y Fibra óptica</sch:knowsAbout>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Alvaro_Rosete_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Alvaro_Rosete_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#CoordinaciónDeCC_Rodhe"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#Recepción_Rodhe"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#Sala1_Rodhe"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#Sala2_Rodhe"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#Sala4_Rodhe"/>
+        <arNav1:career_grade>Maestría en Ciencias en Administración Industrial</arNav1:career_grade>
+        <arNav1:extension>8307</arNav1:extension>
+        <arNav1:fatherName>Rosete</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:motherName>Casados</arNav1:motherName>
+        <foaf:firstName>Alvaro</foaf:firstName>
+        <foaf:mbox xml:lang="docentes.uat.edu.mx">arosete</foaf:mbox>
+        <foaf:title>M.C.</foaf:title>
+        <sch:jobTitle>Coordinación de Centro de Cómputo</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Ana_Neri_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Ana_Neri_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Personal"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#Recepción_Rodhe"/>
+        <arNav1:extension>8300</arNav1:extension>
+        <arNav1:fatherName>Neri</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:middleName>Laura</arNav1:middleName>
+        <arNav1:motherName>De la Cuesta</arNav1:motherName>
+        <foaf:firstName>Ana</foaf:firstName>
+        <foaf:mbox xml:lang="uat.edu.mx">aneri</foaf:mbox>
+        <sch:jobTitle>Asesora de Centro de Computo</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Antonio_Briones_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Antonio_Briones_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#CoordinaciónSEVI_Rodhe"/>
+        <arNav1:extension>8303</arNav1:extension>
+        <arNav1:fatherName>Briones</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:motherName>Mata</arNav1:motherName>
+        <foaf:firstName>Antonio</foaf:firstName>
+        <foaf:mbox xml:lang="uat.edu.mx">abriones</foaf:mbox>
+        <foaf:title>Ing.</foaf:title>
+        <sch:jobTitle>Sala de Educación Virtual Interactiva</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Aula10_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Aula10_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Aula"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>86</arNav1:nodeID>
+        <arNav1:shortName>Aula 10</arNav1:shortName>
+        <foaf:name>Aula 10</foaf:name>
+        <sch:description>En ella se imparten clases de posgrado y diplomados.</sch:description>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Aula1_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Aula1_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>75</arNav1:nodeID>
+        <arNav1:shortName>Aula 1</arNav1:shortName>
+        <foaf:name>Aula 1</foaf:name>
+        <sch:description>Sala de Juntas</sch:description>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Aula2_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Aula2_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>74</arNav1:nodeID>
+        <arNav1:shortName>Aula 2</arNav1:shortName>
+        <foaf:name>Aula 2</foaf:name>
+        <sch:description>Sala de Juntas</sch:description>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Aula3_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Aula3_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Aula"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>76</arNav1:nodeID>
+        <arNav1:shortName>Aula 3</arNav1:shortName>
+        <foaf:name>Aula 3</foaf:name>
+        <sch:description>En ella se imparten clases de posgrado y diplomados.</sch:description>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Aula4_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Aula4_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Aula"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>77</arNav1:nodeID>
+        <arNav1:shortName>Aula 4</arNav1:shortName>
+        <foaf:name>Aula 4</foaf:name>
+        <sch:description>En ella se imparten clases de posgrado y diplomados.</sch:description>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Aula5_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Aula5_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Aula"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>79</arNav1:nodeID>
+        <arNav1:shortName>Aula 5</arNav1:shortName>
+        <foaf:name>Aula 5</foaf:name>
+        <sch:description>En ella se imparten clases de posgrado y diplomados.</sch:description>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Aula6_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Aula6_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Aula"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>82</arNav1:nodeID>
+        <arNav1:shortName>Aula 6</arNav1:shortName>
+        <foaf:name>Aula 6</foaf:name>
+        <sch:description>En ella se imparten clases de posgrado y diplomados.</sch:description>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Aula7_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Aula7_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Aula"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>81</arNav1:nodeID>
+        <arNav1:shortName>Aula 7</arNav1:shortName>
+        <foaf:name>Aula 7</foaf:name>
+        <sch:description>En ella se imparten clases de posgrado y diplomados.</sch:description>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Aula8_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Aula8_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Aula"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>83</arNav1:nodeID>
+        <arNav1:shortName>Aula 8</arNav1:shortName>
+        <foaf:name>Aula 8</foaf:name>
+        <sch:description>En ella se imparten clases de posgrado y diplomados.</sch:description>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Aula9_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Aula9_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Aula"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>85</arNav1:nodeID>
+        <arNav1:shortName>Aula 9</arNav1:shortName>
+        <foaf:name>Aula 9</foaf:name>
+        <sch:description>En ella se imparten clases de posgrado y diplomados.</sch:description>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Azahel_Treviño_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Azahel_Treviño_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#Tutorias_Rodhe"/>
+        <arNav1:career_grade>Maestría en Ingeniería Eléctrica y Electrónica</arNav1:career_grade>
+        <arNav1:extension>8268</arNav1:extension>
+        <arNav1:fatherName>Treviño</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:motherName>Villegas</arNav1:motherName>
+        <foaf:firstName>Azahel</foaf:firstName>
+        <foaf:mbox xml:lang="docentes.uat.edu.mx">azahel.trevino</foaf:mbox>
+        <foaf:title>M.I.E.E.</foaf:title>
+        <sch:jobTitle>Asesorías Académicas</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Azucena_Pérez_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Azucena_Pérez_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Personal"/>
+        <arNav1:extension>1002</arNav1:extension>
+        <arNav1:fatherName>Pérez</arNav1:fatherName>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:motherName>de la Fuente</arNav1:motherName>
+        <foaf:firstName>Azucena</foaf:firstName>
+        <foaf:mbox xml:lang="cinvestav.mx">azucena.perez</foaf:mbox>
+        <foaf:title>Mtra.</foaf:title>
+        <sch:jobTitle>Administración</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#BañoH1_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#BañoH1_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Cuarto"/>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>85</arNav1:nodeID>
+        <arNav1:shortName>Baño H 1</arNav1:shortName>
+        <foaf:name>Baño de Hombres</foaf:name>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#BañoH1_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#BañoH1_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Cuarto"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>24</arNav1:nodeID>
+        <arNav1:shortName>Baño H 1</arNav1:shortName>
+        <foaf:name>Baño de Hombres</foaf:name>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#BañoH2_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#BañoH2_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Cuarto"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>84</arNav1:nodeID>
+        <arNav1:shortName>Baño H 2</arNav1:shortName>
+        <foaf:name>Baño de Hombres</foaf:name>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#BañoM1_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#BañoM1_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Cuarto"/>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>100</arNav1:nodeID>
+        <arNav1:shortName>Baño M 1</arNav1:shortName>
+        <foaf:name>Baño de Mujeres</foaf:name>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#BañoM1_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#BañoM1_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Cuarto"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>12</arNav1:nodeID>
+        <arNav1:shortName>Baño M 1</arNav1:shortName>
+        <foaf:name>Baño de Mujeres</foaf:name>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#BañoM2_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#BañoM2_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Cuarto"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>77</arNav1:nodeID>
+        <arNav1:shortName>Baño M 2</arNav1:shortName>
+        <foaf:name>Baño de Mujeres</foaf:name>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#BecasYMovilidad_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#BecasYMovilidad_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Jaime_Malacara_Rodhe"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Javier_Garza_Rodhe"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>19</arNav1:nodeID>
+        <arNav1:shortName>Becas y Movilidad</arNav1:shortName>
+        <foaf:name>Becas y Movilidad</foaf:name>
+        <sch:description>Brindar información de becas y movilidad internas</sch:description>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#CoorDeCalidad_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#CoorDeCalidad_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Efraín_Jaime_Rodhe"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>32</arNav1:nodeID>
+        <arNav1:shortName>Coor de Calidad</arNav1:shortName>
+        <foaf:name>Coordinación de Sistema de Gestión de Calidad</foaf:name>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#CoordinaciónDeCC_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#CoordinaciónDeCC_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Alvaro_Rosete_Rodhe"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>18</arNav1:nodeID>
+        <arNav1:shortName>Coordinación de CC</arNav1:shortName>
+        <foaf:name>Coordinación de Centro de Computo</foaf:name>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#CoordinaciónIAS_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#CoordinaciónIAS_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Josefina_Cuarenta_Rodhe"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>56</arNav1:nodeID>
+        <arNav1:shortName>Coordinación IAS</arNav1:shortName>
+        <foaf:name>Coordinación de Ingeniería Ambiental y Seguridad</foaf:name>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#CoordinaciónISC_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#CoordinaciónISC_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Adolfo_Rodríguez_Rodhe"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>54</arNav1:nodeID>
+        <arNav1:shortName>Coordinación ISC</arNav1:shortName>
+        <foaf:name>Coordinación de Ingeniería en Sistemas Computacionales</foaf:name>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#CoordinaciónISP_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#CoordinaciónISP_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Lourdes_García_Rodhe"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>50</arNav1:nodeID>
+        <arNav1:shortName>Coordinación ISP</arNav1:shortName>
+        <foaf:name>Coordinación de Ingeniería  en Sistemas de Producción</foaf:name>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#CoordinaciónLC_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#CoordinaciónLC_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Jesús_Hernández_Rodhe"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>52</arNav1:nodeID>
+        <arNav1:shortName>Coordinación LC</arNav1:shortName>
+        <foaf:name>Coordinación de Licenciatura en Comercialización</foaf:name>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#CoordinaciónLE_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#CoordinaciónLE_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Olegario_Méndez_Rodhe"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>62</arNav1:nodeID>
+        <arNav1:shortName>Coordinación LE</arNav1:shortName>
+        <foaf:name>Coordinación de Licenciatura en Economía</foaf:name>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#CoordinaciónLTI_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#CoordinaciónLTI_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Vicente_Villanueva_Rodhe"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>33</arNav1:nodeID>
+        <arNav1:shortName>Coordinación LTI</arNav1:shortName>
+        <foaf:name>Coordinación de Licenciatura en Tecnologías de la Información</foaf:name>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#CoordinaciónMCAI_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#CoordinaciónMCAI_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Jimena_Sánchez_Rodhe"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>15</arNav1:nodeID>
+        <arNav1:shortName>Coordinación MCAI</arNav1:shortName>
+        <foaf:name>Coordinación Maestría en Ciencias de Administración Industrial</foaf:name>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#CoordinaciónSEVI_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#CoordinaciónSEVI_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Antonio_Briones_Rodhe"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>14</arNav1:nodeID>
+        <arNav1:shortName>Coordinación SEVI</arNav1:shortName>
+        <foaf:name>Coordinación de Sala de Educación Virtual Interactiva</foaf:name>
+        <sch:description>Encargado de la Sala de Educación Virtual Interactiva (SEVI)</sch:description>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#CoordinaciónTecnologías_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#CoordinaciónTecnologías_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#David_Vargas_Rodhe"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Jesús_Quintanilla_Rodhe"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>13</arNav1:nodeID>
+        <arNav1:shortName>Coordinación Tecnologías</arNav1:shortName>
+        <foaf:name>Coordinacion de Desarrollo y Aplicación de Tecnologías</foaf:name>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Cynthia_Martínez_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Cynthia_Martínez_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Personal"/>
+        <arNav1:extension>1024</arNav1:extension>
+        <arNav1:fatherName>Martínez</arNav1:fatherName>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:middleName>Nallely</arNav1:middleName>
+        <arNav1:motherName>García</arNav1:motherName>
+        <foaf:firstName>Cynthia</foaf:firstName>
+        <foaf:mbox xml:lang="cinvestav.mx">cynthia.martinez</foaf:mbox>
+        <foaf:title>Lic.</foaf:title>
+        <sch:jobTitle>Área de compras</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#David_Vargas_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#David_Vargas_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#CoordinaciónTecnologías_Rodhe"/>
+        <arNav1:career_grade>Maestría en Ciencias en Ingeniería Electrónica</arNav1:career_grade>
+        <arNav1:extension>8221</arNav1:extension>
+        <arNav1:fatherName>Vargas</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:middleName>Tomás</arNav1:middleName>
+        <arNav1:motherName>Requena</arNav1:motherName>
+        <foaf:firstName>David</foaf:firstName>
+        <foaf:mbox xml:lang="docentes.uat.edu.mx">dvargas</foaf:mbox>
+        <foaf:title>M.C.</foaf:title>
+        <sch:jobTitle>Coordinacion de Desarrollo y Aplicación de Tecnologías</sch:jobTitle>
+        <sch:knowsAbout>Redes de computadoras y telecomunicaciones</sch:knowsAbout>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Eduardo_Rodríguez_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Eduardo_Rodríguez_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#OfEduardoRodríguez_Cinvestav"/>
+        <arNav1:career_grade>Doctorado en Informática</arNav1:career_grade>
+        <arNav1:extension>1100</arNav1:extension>
+        <arNav1:fatherName>Rodríguez</arNav1:fatherName>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:middleName>Arturo</arNav1:middleName>
+        <arNav1:motherName>Tello</arNav1:motherName>
+        <foaf:firstName>Eduardo</foaf:firstName>
+        <foaf:mbox xml:lang="cinvestav.mx">ertello</foaf:mbox>
+        <foaf:title>Dr.</foaf:title>
+        <sch:jobTitle>Investigador</sch:jobTitle>
+        <sch:knowsAbout>Optimización combinatoria, metaheurísticas basadas en aprendizaje máquina, bioinformática</sch:knowsAbout>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Edwin_Aldana_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Edwin_Aldana_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:career_grade>Doctorado en Ciencias de la Computación</arNav1:career_grade>
+        <arNav1:extension>1137</arNav1:extension>
+        <arNav1:fatherName>Aldana</arNav1:fatherName>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:middleName>Javier</arNav1:middleName>
+        <arNav1:motherName>Bobadilla</arNav1:motherName>
+        <foaf:firstName>Edwin</foaf:firstName>
+        <foaf:mbox xml:lang="cinvestav.mx">edwyn.aldana</foaf:mbox>
+        <foaf:title>Dr.</foaf:title>
+        <sch:jobTitle>Investigador</sch:jobTitle>
+        <sch:knowsAbout>Machine Learning, Optimización, Procesos Estocásticos, Data Mining, Ingeniería de Software</sch:knowsAbout>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Edwyn_Aldana_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Edwyn_Aldana_Cinvestav">
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#OfEdwynAldana_Cinvestav"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Efraín_Jaime_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Efraín_Jaime_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#CoorDeCalidad_Rodhe"/>
+        <arNav1:extension>8319</arNav1:extension>
+        <arNav1:fatherName>Jaime</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:motherName>Ang</arNav1:motherName>
+        <foaf:firstName>Efraín</foaf:firstName>
+        <foaf:mbox xml:lang="docentes.uat.edu.mx">ejaimean</foaf:mbox>
+        <foaf:title>Dr.</foaf:title>
+        <sch:jobTitle>Coordinación de Sistema de Gestión de Calidad</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Erick_Porras_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Erick_Porras_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Personal"/>
+        <arNav1:extension>1023</arNav1:extension>
+        <arNav1:fatherName>Porras</arNav1:fatherName>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:middleName>Damián</arNav1:middleName>
+        <arNav1:motherName>Reyna</arNav1:motherName>
+        <foaf:firstName>Erick</foaf:firstName>
+        <foaf:mbox xml:lang="cinvestav.mx">erick.porras</foaf:mbox>
+        <foaf:title>Ing.</foaf:title>
+        <sch:jobTitle>Soporte técnico</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Flor_Hernández_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Flor_Hernández_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Personal"/>
+        <arNav1:extension>1006</arNav1:extension>
+        <arNav1:fatherName>Hernández</arNav1:fatherName>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:motherName>Vázquez</arNav1:motherName>
+        <foaf:firstName>Flor</foaf:firstName>
+        <foaf:mbox xml:lang="cinvestav.mx">flor.hernandez</foaf:mbox>
+        <foaf:title>Lic.</foaf:title>
+        <sch:jobTitle>Asistente de Dirección</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Gregorio_Toscano_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Gregorio_Toscano_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#OfGregorioToscano_Cinvestav"/>
+        <arNav1:career_grade>Doctorado en Ciencias con especialidad en Ingeniería Eléctrica.</arNav1:career_grade>
+        <arNav1:extension>1102</arNav1:extension>
+        <arNav1:fatherName>Toscano</arNav1:fatherName>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:motherName>Pulido</arNav1:motherName>
+        <foaf:firstName>Gregorio</foaf:firstName>
+        <foaf:mbox xml:lang="cinvestav.mx">gtoscano</foaf:mbox>
+        <foaf:title>Dr.</foaf:title>
+        <sch:jobTitle>Investigador</sch:jobTitle>
+        <sch:knowsAbout>Optimización multiobjetivo, Cómputo evolutivo.</sch:knowsAbout>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Heidy_Obregón_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Heidy_Obregón_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Personal"/>
+        <arNav1:extension>1025</arNav1:extension>
+        <arNav1:fatherName>Obregón</arNav1:fatherName>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:motherName>Reta</arNav1:motherName>
+        <foaf:firstName>Heidy</foaf:firstName>
+        <foaf:mbox xml:lang="cinvestav.mx">heidy.obregon</foaf:mbox>
+        <foaf:title>Lic.</foaf:title>
+        <sch:jobTitle>Proyectos</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Hiram_Galeana_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Hiram_Galeana_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#OfHiramGaleana_Cinvestav"/>
+        <arNav1:career_grade>Doctorado en Telecomunicaciones</arNav1:career_grade>
+        <arNav1:extension>1140</arNav1:extension>
+        <arNav1:fatherName>Galeana</arNav1:fatherName>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:motherName>Zapién</arNav1:motherName>
+        <foaf:firstName>Hiram</foaf:firstName>
+        <foaf:mbox xml:lang="cinvestav.mx">hiram.galeana</foaf:mbox>
+        <foaf:title>Dr.</foaf:title>
+        <sch:jobTitle>Investigador</sch:jobTitle>
+        <sch:knowsAbout>Sistemas celulares 5G, Internet de las Cosas, cómputo móvil, m-health</sch:knowsAbout>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Homero_González_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Homero_González_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#Inglés_Rodhe"/>
+        <arNav1:fatherName>González</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:middleName>de Jesús</arNav1:middleName>
+        <arNav1:motherName>Rojo</arNav1:motherName>
+        <foaf:firstName>Homero</foaf:firstName>
+        <foaf:mbox xml:lang="docentes.uat.edu.mx">hgonzalez</foaf:mbox>
+        <sch:jobTitle>Docente de Inglés</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Impresora1_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Impresora1_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Cuarto"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#José_Zapata_Cinvestav"/>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>48</arNav1:nodeID>
+        <arNav1:shortName>Impresora 1</arNav1:shortName>
+        <foaf:name>Impresora 1</foaf:name>
+        <sch:description>Cuarto de impresión</sch:description>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Impresora2_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Impresora2_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Cuarto"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#José_Zapata_Cinvestav"/>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>97</arNav1:nodeID>
+        <arNav1:shortName>Impresora 2</arNav1:shortName>
+        <foaf:name>Impresora 2</foaf:name>
+        <sch:description>Cuarto de impresión</sch:description>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Inglés_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Inglés_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Homero_González_Rodhe"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>58</arNav1:nodeID>
+        <arNav1:shortName>Inglés</arNav1:shortName>
+        <foaf:name>Coordinación de Inglés</foaf:name>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Inocente_Mireles_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Inocente_Mireles_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Personal"/>
+        <arNav1:extension>1018</arNav1:extension>
+        <arNav1:fatherName>Mireles</arNav1:fatherName>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:middleName>Francisco</arNav1:middleName>
+        <arNav1:motherName>Villela</arNav1:motherName>
+        <foaf:firstName>Inocente</foaf:firstName>
+        <foaf:mbox xml:lang="cinvestav.mx">inocente.mireles</foaf:mbox>
+        <sch:jobTitle>Biblioteca e Inventarios</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Iván_López_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Iván_López_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#OfIvánLópez_Cinvestav"/>
+        <arNav1:career_grade>Doctorado en en Computación</arNav1:career_grade>
+        <arNav1:extension>1142</arNav1:extension>
+        <arNav1:fatherName>López</arNav1:fatherName>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:motherName>Arévalo</arNav1:motherName>
+        <foaf:firstName>Iván</foaf:firstName>
+        <foaf:mbox xml:lang="cinvestav.mx">ilopez</foaf:mbox>
+        <foaf:title>Dr.</foaf:title>
+        <sch:jobTitle>Investigador</sch:jobTitle>
+        <sch:knowsAbout>Análisis de datos, Web Semántica</sch:knowsAbout>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Jaime_Malacara_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Jaime_Malacara_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#BecasYMovilidad_Rodhe"/>
+        <arNav1:career_grade>Doctorado en Investigación Educativa</arNav1:career_grade>
+        <arNav1:extension>8304</arNav1:extension>
+        <arNav1:fatherName>Malacara</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:motherName>Navejar</arNav1:motherName>
+        <foaf:firstName>Jaime</foaf:firstName>
+        <foaf:mbox xml:lang="docentes.uat.edu.mx">jmalacara</foaf:mbox>
+        <foaf:title>Dr.</foaf:title>
+        <sch:jobTitle>Movilidad Estudiantil</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Javier_Garza_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Javier_Garza_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#BecasYMovilidad_Rodhe"/>
+        <arNav1:career_grade>Maestría en Administración</arNav1:career_grade>
+        <arNav1:extension>8304</arNav1:extension>
+        <arNav1:fatherName>Garza</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:motherName>Saenz</arNav1:motherName>
+        <foaf:firstName>Javier</foaf:firstName>
+        <foaf:mbox xml:lang="docentes.uat.edu.mx">jgarza</foaf:mbox>
+        <foaf:title>M.A.</foaf:title>
+        <sch:jobTitle>Coordinación de Becas</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Javier_Rubio_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Javier_Rubio_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#OfDrJavierRubio_Cinvestav"/>
+        <arNav1:career_grade>Doctorado en Teoría de la Señal y Comunicaciones.</arNav1:career_grade>
+        <arNav1:extension>1000</arNav1:extension>
+        <arNav1:fatherName>Rubio</arNav1:fatherName>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:motherName>Loyola</arNav1:motherName>
+        <foaf:firstName>Javier</foaf:firstName>
+        <foaf:mbox xml:lang="cinvestav.mx">javier.rubio</foaf:mbox>
+        <foaf:title>Dr.</foaf:title>
+        <sch:jobTitle>Director de Cinvestav Tamaulipas</sch:jobTitle>
+        <sch:knowsAbout>gestión de redes y servicios, gestión autónoma, gestión basada en aspectos tecno-económicos, gestión de calidad de servicio</sch:knowsAbout>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Jesús_Hernández_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Jesús_Hernández_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#CoordinaciónLC_Rodhe"/>
+        <arNav1:career_grade>Maestría en Ciencias en Administración Industrial</arNav1:career_grade>
+        <arNav1:extension>8311</arNav1:extension>
+        <arNav1:fatherName>Hernández</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:middleName>Armando</arNav1:middleName>
+        <arNav1:motherName>Zamorano</arNav1:motherName>
+        <foaf:firstName>Jesús</foaf:firstName>
+        <foaf:mbox xml:lang="docentesuat.edu.mx">jahernandez</foaf:mbox>
+        <foaf:title>M.C.A.I.</foaf:title>
+        <sch:jobTitle>Coordinación de Licenciatura en Comercialización</sch:jobTitle>
+        <sch:knowsAbout>Mercadotecnia y Administración</sch:knowsAbout>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Jesús_Quintanilla_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Jesús_Quintanilla_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Personal"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#CoordinaciónTecnologías_Rodhe"/>
+        <arNav1:extension>8221</arNav1:extension>
+        <arNav1:fatherName>Quintanilla</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:middleName>Adolfo</arNav1:middleName>
+        <arNav1:motherName>Lugo</arNav1:motherName>
+        <foaf:firstName>Jesús</foaf:firstName>
+        <foaf:mbox xml:lang="docentes.uat.edu.mx">jesus.lugo</foaf:mbox>
+        <sch:jobTitle>Coordinador de Tecnologías de la Información</sch:jobTitle>
+        <sch:knowsAbout>Redes de computadoras y telecomunicaciones</sch:knowsAbout>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Jimena_Sánchez_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Jimena_Sánchez_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#CoordinaciónMCAI_Rodhe"/>
+        <arNav1:career_grade>Maestría en Desarrollo de Recursos Humanos</arNav1:career_grade>
+        <arNav1:extension>8302</arNav1:extension>
+        <arNav1:fatherName>Sánchez</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:motherName>Saavedra</arNav1:motherName>
+        <foaf:firstName>Jimena</foaf:firstName>
+        <foaf:mbox xml:lang="docentes.uat.edu.mx">jisanchez</foaf:mbox>
+        <foaf:title>M.D.R.H.</foaf:title>
+        <sch:jobTitle>Coordinación Maestría en Ciencias de Administración Industrial</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Josefina_Cuarenta_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Josefina_Cuarenta_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#CoordinaciónIAS_Rodhe"/>
+        <arNav1:extension>8314</arNav1:extension>
+        <arNav1:fatherName>Cuarenta</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:motherName>Obrajero</arNav1:motherName>
+        <foaf:firstName>Josefina</foaf:firstName>
+        <foaf:mbox xml:lang="docentes.uat.edu.mx">jcuarent</foaf:mbox>
+        <foaf:title>M.S.A.T.</foaf:title>
+        <sch:jobTitle>Coordinación Ingeniero en Ambiental y Seguridad</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#José_García_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#José_García_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#OfJoséGarcía_Cinvestav"/>
+        <arNav1:career_grade>Doctorado en Comunicaciones y Electrónica</arNav1:career_grade>
+        <arNav1:extension>1143</arNav1:extension>
+        <arNav1:fatherName>García</arNav1:fatherName>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:middleName>Juan</arNav1:middleName>
+        <arNav1:motherName>Hernández</arNav1:motherName>
+        <foaf:firstName>José</foaf:firstName>
+        <foaf:mbox xml:lang="cinvestav.mx">jjuan.garcia</foaf:mbox>
+        <foaf:title>Dr.</foaf:title>
+        <sch:jobTitle>Investigador</sch:jobTitle>
+        <sch:knowsAbout>Procesamiento digital de señales para aplicaciones de marcas de agua; Arquitecturas hardware para procesamiento de señales; Análisis forense de señales</sch:knowsAbout>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#José_González_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#José_González_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#OfJoséGonzález_Cinvestav"/>
+        <arNav1:career_grade>Doctorado en arquitectura de computadores</arNav1:career_grade>
+        <arNav1:extension>1138</arNav1:extension>
+        <arNav1:fatherName>González</arNav1:fatherName>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:middleName>Luis</arNav1:middleName>
+        <arNav1:motherName>Compeán</arNav1:motherName>
+        <foaf:firstName>José</foaf:firstName>
+        <foaf:mbox xml:lang="cinvestav.mx">joseluis.gonzalez</foaf:mbox>
+        <foaf:title>Dr.</foaf:title>
+        <sch:jobTitle>Investigador</sch:jobTitle>
+        <sch:knowsAbout>Convergencia entre Cómputo en la nube y Big data. Arquitecturas de microservicios y contenedores virtuales. Procesamiento de grandes volúmenes de datos. Modelos de programación paralélela y distribuida. Productos digitales de observación de la tierra. Flujos de trabajo para IoT y cadenas de suministro. Sistemas de almacenamiento distribuido.</sch:knowsAbout>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#José_Martínez_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#José_Martínez_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#OfDrLázaro_Rodhe"/>
+        <arNav1:career_grade>Doctorado en Ciencias en Computación</arNav1:career_grade>
+        <arNav1:extension>8281</arNav1:extension>
+        <arNav1:fatherName>Martínez</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:middleName>Lazaro</arNav1:middleName>
+        <arNav1:motherName>Rodríguez</arNav1:motherName>
+        <foaf:firstName>José </foaf:firstName>
+        <foaf:mbox xml:lang="uat.edu.mx">lazaro.martinez</foaf:mbox>
+        <foaf:title>Dr.</foaf:title>
+        <sch:jobTitle>Docente Investigador</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#José_Ramírez_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#José_Ramírez_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#OfJoséRamirez_Cinvestav"/>
+        <arNav1:career_grade>Doctorado en Mecánica de Sólidos</arNav1:career_grade>
+        <arNav1:extension>1014</arNav1:extension>
+        <arNav1:fatherName>Ramírez</arNav1:fatherName>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:middleName>Gabriel</arNav1:middleName>
+        <arNav1:motherName>Torres</arNav1:motherName>
+        <foaf:firstName>José</foaf:firstName>
+        <foaf:mbox xml:lang="cinvestav.mx">grtorres</foaf:mbox>
+        <foaf:title>Dr.</foaf:title>
+        <sch:jobTitle>Coordinador de Cinvestav Tamaulipas</sch:jobTitle>
+        <sch:knowsAbout>Planificación de trayectorias en robótica móvil. Robótica humanoide. Vehículos aéreos autónomos.</sch:knowsAbout>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#José_Torres_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#José_Torres_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#OfJoséTorres_Cinvestav"/>
+        <arNav1:career_grade>Doctorado en Ciencias de la Computación</arNav1:career_grade>
+        <arNav1:extension>1108</arNav1:extension>
+        <arNav1:fatherName>Torres</arNav1:fatherName>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:motherName>Jiménez</arNav1:motherName>
+        <foaf:firstName>José</foaf:firstName>
+        <foaf:mbox xml:lang="cinvestav.mx">jtj</foaf:mbox>
+        <foaf:title>Dr.</foaf:title>
+        <sch:jobTitle>Investigador</sch:jobTitle>
+        <sch:knowsAbout>Optimización combinatoria. Bases de datos. Covering Arrays</sch:knowsAbout>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#José_Zapata_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#José_Zapata_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Personal"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#Impresora1_Cinvestav"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#Impresora2_Cinvestav"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#Site1_Cinvestav"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#Site2_Cinvestav"/>
+        <arNav1:career_grade>Licenciatura en telemática</arNav1:career_grade>
+        <arNav1:extension>1016</arNav1:extension>
+        <arNav1:fatherName>Zapata</arNav1:fatherName>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:middleName>de Jesús</arNav1:middleName>
+        <arNav1:motherName>Lara</arNav1:motherName>
+        <foaf:firstName>José</foaf:firstName>
+        <foaf:mbox xml:lang="cinvestav.mx">jzapata</foaf:mbox>
+        <foaf:title>Lic.</foaf:title>
+        <sch:jobTitle>Sistemas</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Juan_Gómez_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Juan_Gómez_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:extension>8318</arNav1:extension>
+        <arNav1:fatherName>Gómez</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:middleName>Alberto</arNav1:middleName>
+        <arNav1:motherName>Castillo</arNav1:motherName>
+        <foaf:firstName>Juan</foaf:firstName>
+        <foaf:mbox xml:lang="docentes.uat.edu.mx">jagomez</foaf:mbox>
+        <foaf:title>Lic.</foaf:title>
+        <sch:jobTitle>Edición y Publicación</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Karla_Martínez_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Karla_Martínez_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Personal"/>
+        <arNav1:extension>1017</arNav1:extension>
+        <arNav1:fatherName>Martínez</arNav1:fatherName>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:middleName>Edith</arNav1:middleName>
+        <arNav1:motherName>García</arNav1:motherName>
+        <foaf:firstName>Karla</foaf:firstName>
+        <foaf:mbox xml:lang="cinvestav.mx">karla.martinez</foaf:mbox>
+        <foaf:title>Lic.</foaf:title>
+        <sch:jobTitle>Contabilidad</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Karla_Rodríguez_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Karla_Rodríguez_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Personal"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#Recepción_Rodhe"/>
+        <arNav1:career_grade>Maestría en Relaciones Industriales</arNav1:career_grade>
+        <arNav1:extension>8300</arNav1:extension>
+        <arNav1:fatherName>Rodríguez</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:middleName>Karina</arNav1:middleName>
+        <arNav1:motherName>Solís</arNav1:motherName>
+        <foaf:firstName>Karla</foaf:firstName>
+        <foaf:mbox xml:lang="docentes.uad.edu.mx">ksolis</foaf:mbox>
+        <foaf:title>M.R.I</foaf:title>
+        <sch:jobTitle>Asesora de Centro de Computo</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Laboratorio1_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Laboratorio1_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Laboratorio"/>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>30</arNav1:nodeID>
+        <arNav1:shortName>Laboratorio 1</arNav1:shortName>
+        <foaf:name>Laboratorio 1</foaf:name>
+        <sch:description>Cubículo de estudiantes de maestría</sch:description>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Laboratorio2_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Laboratorio2_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Laboratorio"/>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>31</arNav1:nodeID>
+        <arNav1:shortName>Laboratorio 2</arNav1:shortName>
+        <foaf:name>Laboratorio 2</foaf:name>
+        <sch:description>Laboratorio de cómputo para prácticas computacionales</sch:description>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Laboratorio3_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Laboratorio3_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Laboratorio"/>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>27</arNav1:nodeID>
+        <arNav1:shortName>Laboratorio 3</arNav1:shortName>
+        <foaf:name>Laboratorio 3</foaf:name>
+        <sch:description>Cubículo de estudiantes de maestría</sch:description>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Laboratorio4_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Laboratorio4_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Laboratorio"/>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>28</arNav1:nodeID>
+        <arNav1:shortName>Laboratorio 4</arNav1:shortName>
+        <foaf:name>Laboratorio 4</foaf:name>
+        <sch:description>Cubículo de estudiantes de doctorado</sch:description>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Laboratorio5_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Laboratorio5_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Laboratorio"/>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>29</arNav1:nodeID>
+        <arNav1:shortName>Laboratorio 5</arNav1:shortName>
+        <foaf:name>Laboratorio 5</foaf:name>
+        <sch:description>Cubículo de estudiantes de maestría</sch:description>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Laboratorio6_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Laboratorio6_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Aula"/>
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Laboratorio"/>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>82</arNav1:nodeID>
+        <arNav1:shortName>Laboratorio 6</arNav1:shortName>
+        <foaf:name>Laboratorio 6</foaf:name>
+        <sch:description>Laboratorio de cómputo para prácticas computacionales</sch:description>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Laboratorio7_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Laboratorio7_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Aula"/>
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Laboratorio"/>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>83</arNav1:nodeID>
+        <arNav1:shortName>Laboratorio 7</arNav1:shortName>
+        <foaf:name>Laboratorio 7</foaf:name>
+        <sch:description>Laboratorio de cómputo para prácticas computacionales</sch:description>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Laboratorio8_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Laboratorio8_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Aula"/>
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Laboratorio"/>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>79</arNav1:nodeID>
+        <arNav1:shortName>Laboratorio 8</arNav1:shortName>
+        <foaf:name>Laboratorio 8</foaf:name>
+        <sch:description>Laboratorio de Robótica</sch:description>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Laboratorio9_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Laboratorio9_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Aula"/>
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Laboratorio"/>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>80</arNav1:nodeID>
+        <arNav1:shortName>Laboratorio 9</arNav1:shortName>
+        <foaf:name>Laboratorio 9</foaf:name>
+        <sch:description>Laboratorio de Redes</sch:description>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Leobardo_Pérez_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Leobardo_Pérez_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Personal"/>
+        <arNav1:extension>1022</arNav1:extension>
+        <arNav1:fatherName>Pérez</arNav1:fatherName>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:motherName>Martínez</arNav1:motherName>
+        <foaf:firstName>Leobardo</foaf:firstName>
+        <foaf:mbox xml:lang="cinvestav.mx">vinculacion.tamps</foaf:mbox>
+        <foaf:title>Ing.</foaf:title>
+        <sch:jobTitle>Vinculación</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Lourdes_García_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Lourdes_García_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#CoordinaciónISP_Rodhe"/>
+        <arNav1:extension>8310</arNav1:extension>
+        <arNav1:fatherName>García</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:middleName>Yajaira</arNav1:middleName>
+        <arNav1:motherName>Rivera</arNav1:motherName>
+        <foaf:firstName>Lourdes</foaf:firstName>
+        <foaf:mbox xml:lang="docentes.uat.edu.mx">ygarcia</foaf:mbox>
+        <foaf:title>M.C.</foaf:title>
+        <sch:jobTitle>Coordinación de Ingeriería en Sistemas de Producción</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Maria_González_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Maria_González_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#ProgramasDeEstudio_Rodhe"/>
+        <arNav1:extension>8325</arNav1:extension>
+        <arNav1:fatherName>González</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:middleName>Blanca</arNav1:middleName>
+        <arNav1:motherName>Salazar</arNav1:motherName>
+        <foaf:firstName>Maria</foaf:firstName>
+        <foaf:mbox xml:lang="docentes.uat.edu.mx">bgonzalez</foaf:mbox>
+        <foaf:title>Dra.</foaf:title>
+        <sch:jobTitle>Soporte, Evaluación y Acreditación de Programas de Estudio</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Mario_Garza_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Mario_Garza_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#OfMarioGarza_Cinvestav"/>
+        <arNav1:career_grade>Doctorado en Ciencias de la Computación</arNav1:career_grade>
+        <arNav1:extension>1136</arNav1:extension>
+        <arNav1:fatherName>Garza</arNav1:fatherName>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:motherName>Fabre</arNav1:motherName>
+        <foaf:firstName>Mario</foaf:firstName>
+        <foaf:mbox xml:lang="cinvestav.mx">mario.garza</foaf:mbox>
+        <foaf:title>Dr.</foaf:title>
+        <sch:jobTitle>Investigador</sch:jobTitle>
+        <sch:knowsAbout>Optimización; Inteligencia Computacional; Metaheurísticas bioinspiradas</sch:knowsAbout>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#María_Barrios_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#María_Barrios_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#Tutorias_Rodhe"/>
+        <arNav1:extension>8268</arNav1:extension>
+        <arNav1:fatherName>Barrios</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:middleName>Ernestina</arNav1:middleName>
+        <arNav1:motherName>Puga</arNav1:motherName>
+        <foaf:firstName>María</foaf:firstName>
+        <foaf:mbox xml:lang="docentes.uat.edu.mx">ebarrios</foaf:mbox>
+        <sch:jobTitle>Orientación</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Miguel_Angli_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Miguel_Angli_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#OfMiguelAngli_Rodhe"/>
+        <arNav1:fatherName>Angli</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:middleName>Angel</arNav1:middleName>
+        <foaf:firstName>Miguel</foaf:firstName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Miguel_Morales_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Miguel_Morales_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#OfMiguelMorales_Cinvestav"/>
+        <arNav1:career_grade>Doctorado en Ciencias Computacionales</arNav1:career_grade>
+        <arNav1:extension>1134</arNav1:extension>
+        <arNav1:fatherName>Morales</arNav1:fatherName>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:motherName>Sandoval</arNav1:motherName>
+        <foaf:firstName>Miguel</foaf:firstName>
+        <foaf:mbox xml:lang="cinvestav.mx">miguel.morales</foaf:mbox>
+        <foaf:title>Dr.</foaf:title>
+        <sch:jobTitle>Investigador</sch:jobTitle>
+        <sch:knowsAbout>Criptografía y Seguridad de datos</sch:knowsAbout>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Nohelia_Bernal_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Nohelia_Bernal_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Personal"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#Recepción_Rodhe"/>
+        <arNav1:career_grade>Ingeniería en Sistemas de Producción</arNav1:career_grade>
+        <arNav1:extension>8300</arNav1:extension>
+        <arNav1:fatherName>Bernal</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:motherName>Almaguer</arNav1:motherName>
+        <foaf:firstName>Nohelia</foaf:firstName>
+        <foaf:mbox xml:lang="uat.edu.mx">nbernal</foaf:mbox>
+        <foaf:title>Ing.</foaf:title>
+        <sch:jobTitle>Asesora de Centro de Computo</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#OfDrJavierRubio_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#OfDrJavierRubio_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Javier_Rubio_Cinvestav"/>
+        <arNav1:areas>TECNOLOGÍAS PARA LA GESTIÓN DE DATOS Y REDES</arNav1:areas>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>40</arNav1:nodeID>
+        <arNav1:shortName>Of Dr Javier Rubio</arNav1:shortName>
+        <foaf:name>Oficina Dr. Javier Rubio Loyola</foaf:name>
+        <sch:description>Oficina para investigador</sch:description>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#OfDrLázaro_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#OfDrLázaro_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#José_Martínez_Rodhe"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>41</arNav1:nodeID>
+        <arNav1:shortName>Of Dr Lázaro</arNav1:shortName>
+        <foaf:name>Oficina del Dr. Lázaro</foaf:name>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#OfEduardoRodríguez_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#OfEduardoRodríguez_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Eduardo_Rodríguez_Cinvestav"/>
+        <arNav1:areas>INTELIGENCIA COMPUTACIONAL Y OPTIMIZACIÓN AVANZADA</arNav1:areas>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>37</arNav1:nodeID>
+        <arNav1:shortName>Of Eduardo Rodríguez</arNav1:shortName>
+        <foaf:name>Oficina Dr. Eduardo Arturo Rodríguez Tello</foaf:name>
+        <sch:description>Oficina para investigador</sch:description>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#OfEdwynAldana_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#OfEdwynAldana_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Edwyn_Aldana_Cinvestav"/>
+        <arNav1:areas>TECNOLOGÍAS PARA LA GESTIÓN DE DATOS Y REDES</arNav1:areas>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>87</arNav1:nodeID>
+        <arNav1:shortName>Of Edwyn Aldana</arNav1:shortName>
+        <foaf:name>Oficina Dr. Edwyn Javier Aldana Bobadilla</foaf:name>
+        <sch:description>Oficina para investigador</sch:description>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#OfGregorioToscano_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#OfGregorioToscano_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Gregorio_Toscano_Cinvestav"/>
+        <arNav1:areas>INTELIGENCIA COMPUTACIONAL Y OPTIMIZACIÓN AVANZADA</arNav1:areas>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>36</arNav1:nodeID>
+        <arNav1:shortName>Of Gregorio Toscano</arNav1:shortName>
+        <foaf:name>Oficina Dr. Gregorio Toscano Pulido</foaf:name>
+        <sch:description>Oficina para investigador</sch:description>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#OfHiramGaleana_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#OfHiramGaleana_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Hiram_Galeana_Cinvestav"/>
+        <arNav1:areas>TECNOLOGÍAS PARA LA GESTIÓN DE DATOS Y REDES</arNav1:areas>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>92</arNav1:nodeID>
+        <arNav1:shortName>Of Hiram Galeana</arNav1:shortName>
+        <foaf:name>Oficina Dr. Hiram Galeana Zapién</foaf:name>
+        <sch:description>Oficina para investigador</sch:description>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#OfIvánLópez_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#OfIvánLópez_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Iván_López_Cinvestav"/>
+        <arNav1:areas>TECNOLOGÍAS PARA LA GESTIÓN DE DATOS Y REDES</arNav1:areas>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>95</arNav1:nodeID>
+        <arNav1:shortName>Of Iván López</arNav1:shortName>
+        <foaf:name>Oficina Dr. Iván López Arévalo</foaf:name>
+        <sch:description>Oficina para investigador</sch:description>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#OfJoséGarcía_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#OfJoséGarcía_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#José_García_Cinvestav"/>
+        <arNav1:areas>INGENIERÍA COMPUTACIONAL</arNav1:areas>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>94</arNav1:nodeID>
+        <arNav1:shortName>Of José García</arNav1:shortName>
+        <foaf:name>Oficina Dr. José Juan García Hernández</foaf:name>
+        <sch:description>Oficina para investigador</sch:description>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#OfJoséGonzález_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#OfJoséGonzález_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#José_González_Cinvestav"/>
+        <arNav1:areas>TECNOLOGÍAS PARA LA GESTIÓN DE DATOS Y REDES</arNav1:areas>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>86</arNav1:nodeID>
+        <arNav1:shortName>Of José González</arNav1:shortName>
+        <foaf:name>Oficina Dr. José Luis González Compeán</foaf:name>
+        <sch:description>Oficina para investigador</sch:description>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#OfJoséRamirez_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#OfJoséRamirez_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#José_Ramírez_Cinvestav"/>
+        <arNav1:areas>INGENIERÍA COMPUTACIONAL</arNav1:areas>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>35</arNav1:nodeID>
+        <arNav1:shortName>Of José Ramirez</arNav1:shortName>
+        <foaf:name>Oficina Dr. José Gabriel Ramírez Torres </foaf:name>
+        <sch:description>Oficina para investigador</sch:description>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#OfJoséTorres_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#OfJoséTorres_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#José_Torres_Cinvestav"/>
+        <arNav1:areas>INTELIGENCIA COMPUTACIONAL Y OPTIMIZACIÓN AVANZADA</arNav1:areas>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>43</arNav1:nodeID>
+        <arNav1:shortName>Of José Torres</arNav1:shortName>
+        <foaf:name>Oficina Dr. José Torres Jiménez</foaf:name>
+        <sch:description>Oficina para investigador</sch:description>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#OfLicVictorGonzalez_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#OfLicVictorGonzalez_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Victor_González_Rodhe"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>60</arNav1:nodeID>
+        <arNav1:shortName>Of Lic Victor Gonzalez</arNav1:shortName>
+        <foaf:name>Oficina del Lic. Victor Gonzalez</foaf:name>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#OfMarioGarza_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#OfMarioGarza_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Mario_Garza_Cinvestav"/>
+        <arNav1:areas>INTELIGENCIA COMPUTACIONAL Y OPTIMIZACIÓN AVANZADA</arNav1:areas>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>88</arNav1:nodeID>
+        <arNav1:shortName>Of Mario Garza</arNav1:shortName>
+        <foaf:name>Oficina Dr. Mario Garza Fabre</foaf:name>
+        <sch:description>Oficina para investigador</sch:description>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#OfMiguelAngli_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#OfMiguelAngli_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Miguel_Angli_Rodhe"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>64</arNav1:nodeID>
+        <arNav1:shortName>Of Miguel Angli</arNav1:shortName>
+        <foaf:name>Oficina Miguel Angli</foaf:name>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#OfMiguelMorales_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#OfMiguelMorales_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Miguel_Morales_Cinvestav"/>
+        <arNav1:areas>INGENIERÍA COMPUTACIONAL</arNav1:areas>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>89</arNav1:nodeID>
+        <arNav1:shortName>Of Miguel Morales</arNav1:shortName>
+        <foaf:name>Oficina Dr. Miguel Morales Sandoval</foaf:name>
+        <sch:description>Oficina para investigador</sch:description>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#OfRicardoLanda_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#OfRicardoLanda_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Ricardo_Landa_Cinvestav"/>
+        <arNav1:areas>INTELIGENCIA COMPUTACIONAL Y OPTIMIZACIÓN AVANZADA</arNav1:areas>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>34</arNav1:nodeID>
+        <arNav1:shortName>Of Ricardo Landa</arNav1:shortName>
+        <foaf:name>Oficina Dr. Ricardo Landa Becerra</foaf:name>
+        <sch:description>Oficina para investigador</sch:description>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#OfVíctorSosa_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#OfVíctorSosa_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Víctor_Sosa_Cinvestav"/>
+        <arNav1:areas>TECNOLOGÍAS PARA LA GESTIÓN DE DATOS Y REDES</arNav1:areas>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>38</arNav1:nodeID>
+        <arNav1:shortName>Of Víctor Sosa</arNav1:shortName>
+        <foaf:name>Oficina Dr. Víctor Jesús Sosa Sosa</foaf:name>
+        <sch:description>Oficina para investigador</sch:description>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#OfWilfridoGómez_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#OfWilfridoGómez_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Wilfrido_Gómez_Cinvestav"/>
+        <arNav1:areas>INGENIERÍA COMPUTACIONAL</arNav1:areas>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>42</arNav1:nodeID>
+        <arNav1:shortName>Of Wilfrido Gómez</arNav1:shortName>
+        <foaf:name>Oficina Dr. Wilfrido Gómez Flores</foaf:name>
+        <sch:description>Oficina para investigador</sch:description>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Olegario_Méndez_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Olegario_Méndez_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#CoordinaciónLE_Rodhe"/>
+        <arNav1:extension>8316</arNav1:extension>
+        <arNav1:fatherName>Méndez</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:motherName>Cabrera</arNav1:motherName>
+        <foaf:firstName>Olegario</foaf:firstName>
+        <foaf:mbox xml:lang="docentes.uat.edu.mx">olmendez</foaf:mbox>
+        <foaf:title>Lic.</foaf:title>
+        <sch:jobTitle>Coordinación de Licenciatura en Economía</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#ProgramasDeEstudio_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#ProgramasDeEstudio_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Maria_González_Rodhe"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>47</arNav1:nodeID>
+        <arNav1:shortName>Programas de Estudio</arNav1:shortName>
+        <foaf:name>Soporte Evaluación y Acreditación de Programas de Estudio</foaf:name>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Recepción_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Recepción_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Alvaro_Rosete_Rodhe"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Ana_Neri_Rodhe"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Karla_Rodríguez_Rodhe"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Nohelia_Bernal_Rodhe"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Velia_Hernández_Rodhe"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>2</arNav1:nodeID>
+        <arNav1:shortName>Recepción</arNav1:shortName>
+        <foaf:name>Recepción de computo</foaf:name>
+        <sch:description>Brindar infomración de las asignaturas en centro de computo</sch:description>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Ricardo_Landa_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Ricardo_Landa_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#OfRicardoLanda_Cinvestav"/>
+        <arNav1:career_grade>Doctorado en Ciencias con especialidad en Ingeniería Eléctrica</arNav1:career_grade>
+        <arNav1:extension>1104</arNav1:extension>
+        <arNav1:fatherName>Landa</arNav1:fatherName>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:motherName>Becerra</arNav1:motherName>
+        <foaf:firstName>Ricardo</foaf:firstName>
+        <foaf:mbox xml:lang="cinvestav.mx">ricardo.landa</foaf:mbox>
+        <foaf:title>Dr.</foaf:title>
+        <sch:jobTitle>Investigador</sch:jobTitle>
+        <sch:knowsAbout>Computación evolutiva, optimización numérica, optimización a gran escala, optimización multiobjetivo</sch:knowsAbout>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Rocio_Méndez_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Rocio_Méndez_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#AcciónTutorial_Rodhe"/>
+        <arNav1:extension>8320</arNav1:extension>
+        <arNav1:fatherName>Méndez</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:motherName>Mendoza</arNav1:motherName>
+        <foaf:firstName>Rocio</foaf:firstName>
+        <foaf:mbox xml:lang="uat.edu.mx">rocio.mendez</foaf:mbox>
+        <foaf:title>Lic.</foaf:title>
+        <sch:jobTitle>Apoyo Acción Tutorial</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Sala1_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Sala1_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Cuarto"/>
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Sala"/>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>32</arNav1:nodeID>
+        <arNav1:shortName>Sala 1</arNav1:shortName>
+        <foaf:name>Sala 1</foaf:name>
+        <sch:description>Área recreativa</sch:description>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Sala1_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Sala1_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Laboratorio"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Alvaro_Rosete_Rodhe"/>
+        <arNav1:areas>Todas las carreras</arNav1:areas>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>9</arNav1:nodeID>
+        <arNav1:shortName>Sala 1</arNav1:shortName>
+        <foaf:name>Sala 1</foaf:name>
+        <sch:description>Laboratorio de computo donde se imparten clases de a nivel licenciatura</sch:description>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Sala2_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Sala2_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Cuarto"/>
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Sala"/>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>33</arNav1:nodeID>
+        <arNav1:shortName>Sala 2</arNav1:shortName>
+        <foaf:name>Sala 2</foaf:name>
+        <sch:description>Sala de Conferencias</sch:description>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Sala2_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Sala2_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Laboratorio"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Alvaro_Rosete_Rodhe"/>
+        <arNav1:areas>Todas las carreras</arNav1:areas>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>10</arNav1:nodeID>
+        <arNav1:shortName>Sala 2</arNav1:shortName>
+        <foaf:name>Sala 2</foaf:name>
+        <sch:description>Laboratorio de computo donde se imparten clases de a nivel licenciatura</sch:description>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Sala4_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Sala4_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Laboratorio"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Alvaro_Rosete_Rodhe"/>
+        <arNav1:areas>ISC y LTI</arNav1:areas>
+        <arNav1:areas>Todas las carreras</arNav1:areas>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>21</arNav1:nodeID>
+        <arNav1:nodeID>22</arNav1:nodeID>
+        <arNav1:shortName>Sala 4</arNav1:shortName>
+        <foaf:name>Sala 3</foaf:name>
+        <foaf:name>Sala 4</foaf:name>
+        <sch:description>Laboratorio de computo donde se imparten clases de a nivel licenciatura</sch:description>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Site1_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Site1_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Cuarto"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#José_Zapata_Cinvestav"/>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>47</arNav1:nodeID>
+        <arNav1:shortName>Site 1</arNav1:shortName>
+        <foaf:name>Site 1</foaf:name>
+        <sch:description>Cuarto de comunicaciones y switch</sch:description>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Site2_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Site2_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Cuarto"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#José_Zapata_Cinvestav"/>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>98</arNav1:nodeID>
+        <arNav1:shortName>Site 2</arNav1:shortName>
+        <foaf:name>Site 2</foaf:name>
+        <sch:description>Cuarto de comunicaciones y switch</sch:description>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Tutorias_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Tutorias_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Oficina"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Azahel_Treviño_Rodhe"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#María_Barrios_Rodhe"/>
+        <arNav1:esEncargadoPor rdf:resource="http://www.jesusrubio.com/arNav#Yuridia_Mendoza_Rodhe"/>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:nodeID>27</arNav1:nodeID>
+        <arNav1:shortName>Tutorias</arNav1:shortName>
+        <foaf:name>Coordinación de Tutorías</foaf:name>
+        <sch:description>Seguimiento de tutorías y apoyo al alumno</sch:description>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Velia_Hernández_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Velia_Hernández_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Personal"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#Recepción_Rodhe"/>
+        <arNav1:career_grade>Ingeniería en Sistemas Computacionales</arNav1:career_grade>
+        <arNav1:extension>8300</arNav1:extension>
+        <arNav1:fatherName>Hernández</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:middleName>María</arNav1:middleName>
+        <arNav1:motherName>Flores</arNav1:motherName>
+        <foaf:firstName>Velia</foaf:firstName>
+        <foaf:mbox xml:lang="docentes.uat.edu.mx">vmhernandez</foaf:mbox>
+        <foaf:title>Ing.</foaf:title>
+        <sch:jobTitle>Asesora de Centro de Computo</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Verónica_Nava_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Verónica_Nava_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Personal"/>
+        <arNav1:extension>1007</arNav1:extension>
+        <arNav1:fatherName>Nava</arNav1:fatherName>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:motherName>García</arNav1:motherName>
+        <foaf:firstName>Verónica</foaf:firstName>
+        <foaf:mbox xml:lang="cinvestav.mx">veronica.nava</foaf:mbox>
+        <foaf:title>Lic.</foaf:title>
+        <sch:jobTitle>Asistente de Coordinación Académica</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Vicente_Villanueva_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Vicente_Villanueva_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#CoordinaciónLTI_Rodhe"/>
+        <arNav1:extension>8317</arNav1:extension>
+        <arNav1:fatherName>Villanueva</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:motherName>Hernández</arNav1:motherName>
+        <foaf:firstName>Vicente</foaf:firstName>
+        <foaf:mbox xml:lang="docentes.uat.edu.mx">vhernand</foaf:mbox>
+        <foaf:title>Dr.</foaf:title>
+        <sch:jobTitle>Coordinador de Licenciatura en Tecnologías de la Información</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Victor_González_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Victor_González_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#OfLicVictorGonzalez_Rodhe"/>
+        <arNav1:extension>8321</arNav1:extension>
+        <arNav1:fatherName>González</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:motherName>González</arNav1:motherName>
+        <foaf:firstName>Victor</foaf:firstName>
+        <foaf:mbox xml:lang="docentes.uat.edu.mx">victor.gonzalez</foaf:mbox>
+        <foaf:title>Lic.</foaf:title>
+        <sch:jobTitle>Docente Investigador</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Víctor_Sosa_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Víctor_Sosa_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#OfVíctorSosa_Cinvestav"/>
+        <arNav1:career_grade>Doctorado en Ciencias de la Computación</arNav1:career_grade>
+        <arNav1:extension>1101</arNav1:extension>
+        <arNav1:fatherName>Sosa</arNav1:fatherName>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:middleName>Jesús</arNav1:middleName>
+        <arNav1:motherName>Sosa</arNav1:motherName>
+        <foaf:firstName>Víctor</foaf:firstName>
+        <foaf:mbox xml:lang="cinvestav.mx">vjsosa</foaf:mbox>
+        <foaf:title>Dr.</foaf:title>
+        <sch:jobTitle>Investigador</sch:jobTitle>
+        <sch:knowsAbout>Sistemas distribuidos. Bases de datos. Sistemas de información</sch:knowsAbout>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Wilfrido_Gómez_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Wilfrido_Gómez_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#OfWilfridoGómez_Cinvestav"/>
+        <arNav1:career_grade>Doctorado  en Ingeniería Eléctrica </arNav1:career_grade>
+        <arNav1:extension>1109</arNav1:extension>
+        <arNav1:fatherName>Gómez</arNav1:fatherName>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:motherName>Flores</arNav1:motherName>
+        <foaf:firstName>Wilfrido</foaf:firstName>
+        <foaf:mbox xml:lang="cinvestav.mx">wilfrido.gomez</foaf:mbox>
+        <foaf:title>Dr.</foaf:title>
+        <sch:jobTitle>Investigador</sch:jobTitle>
+        <sch:knowsAbout>Análisis de imágenes, reconocimiento de patrones, y aprendizaje para máquinas</sch:knowsAbout>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#Yuridia_Mendoza_Rodhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#Yuridia_Mendoza_Rodhe">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Docente"/>
+        <arNav1:esEncargadoDe rdf:resource="http://www.jesusrubio.com/arNav#Tutorias_Rodhe"/>
+        <arNav1:extension>8268</arNav1:extension>
+        <arNav1:fatherName>Mendoza</arNav1:fatherName>
+        <arNav1:institution>Rodhe</arNav1:institution>
+        <arNav1:motherName>Luna</arNav1:motherName>
+        <foaf:firstName>Yuridia</foaf:firstName>
+        <foaf:mbox xml:lang="docentes.uat.edu.mx">ymluna</foaf:mbox>
+        <sch:jobTitle>Coordinadora de Tutorías</sch:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#bodega1_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#bodega1_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Cuarto"/>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>50</arNav1:nodeID>
+        <arNav1:shortName>bodega 1</arNav1:shortName>
+        <foaf:name>bodega 1</foaf:name>
+        <sch:description>bodega</sch:description>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#bodega2_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#bodega2_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Cuarto"/>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>51</arNav1:nodeID>
+        <arNav1:shortName>bodega 2</arNav1:shortName>
+        <foaf:name>bodega 2</foaf:name>
+        <sch:description>bodega</sch:description>
+        <sch:floorLevel>Planta Baja</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#bodega3_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#bodega3_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Cuarto"/>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>103</arNav1:nodeID>
+        <arNav1:shortName>bodega 3</arNav1:shortName>
+        <foaf:name>bodega 3</foaf:name>
+        <sch:description>bodega</sch:description>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jesusrubio.com/arNav#bodega4_Cinvestav -->
+
+    <owl:NamedIndividual rdf:about="http://www.jesusrubio.com/arNav#bodega4_Cinvestav">
+        <rdf:type rdf:resource="http://www.jesusrubio.com/arNav#Cuarto"/>
+        <arNav1:institution>Cinvestav</arNav1:institution>
+        <arNav1:nodeID>104</arNav1:nodeID>
+        <arNav1:shortName>bodega 4</arNav1:shortName>
+        <foaf:name>bodega 4</foaf:name>
+        <sch:description>bodega</sch:description>
+        <sch:floorLevel>Planta Alta</sch:floorLevel>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

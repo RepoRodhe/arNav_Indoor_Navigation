@@ -1,0 +1,1 @@
+{"Collections":[{"sheetName":"Puntos de interés","startColumn":"E","endColumn":"I","startRow":"3","endRow":"83","comment":"","rule":"Individual: @**(mm:append(\"_\", @N*))\nFacts:\tesEncargadoDe @C* (mm:append(\"_\", @N*))","active":true}]}
